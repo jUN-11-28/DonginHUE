@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>동인휴 관리앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="google" >
+
+    <h2>동인휴 관리실 - 연락처</h2>
+    <a href="index.html">검침량 입력하러가기</a>
+    <a href="calc.html">계산하러가기</a>
+    <div>
+        <table>
+            <th>호수</th>
+            <th>연락처</th>
+            <tbody>
+                <tr>
+                    <td>101호</td>
+                    <td><input type="number" id="1" size="20"></td>
+                </tr>
+                <tr>
+                    <td>102호</td>
+                    <td><input type="number" id="2" size="20"></td>
+                </tr>
+                <tr>
+                    <td>103호</td>
+                    <td><input type="number" id="3" size="20"></td>
+                </tr>
+                <tr>
+                    <td>201호</td>
+                    <td><input type="number" id="4" size="20"></td>
+                </tr>
+                <tr>
+                    <td>202호</td>
+                    <td><input type="number" id="5" size="20"></td>
+                </tr>
+                <tr>
+                    <td>203호</td>
+                    <td><input type="number" id="6" size="20"></td>
+                </tr>
+                <tr>
+                    <td>205호</td>
+                    <td><input type="number" id="7" size="20"></td>
+                </tr>
+                <tr>
+                    <td>206호</td>
+                    <td><input type="number" id="8" size="20"></td>
+                </tr>
+                <tr>
+                    <td>207호</td>
+                    <td><input type="number" id="9" size="20"></td>
+                </tr>
+                <tr>
+                    <td>301호</td>
+                    <td><input type="number" id="10" size="20"></td>
+                </tr>
+                <tr>
+                    <td>302호</td>
+                    <td><input type="number" id="11" size="20"></td>
+                </tr>
+                <tr>
+                    <td>303호</td>
+                    <td><input type="number" id="12" size="20"></td>
+                </tr>
+                <tr>
+                    <td>305호</td>
+                    <td><input type="number" id="13" size="20"></td>
+                </tr>
+                <tr>
+                    <td>306호</td>
+                    <td><input type="number" id="14" size="20"></td>
+                </tr>
+                <tr>
+                    <td>307호</td>
+                    <td><input type="number" id="15" size="20"></td>
+                </tr>
+                <tr>
+                    <td>401호</td>
+                    <td><input type="number" id="16" size="20"></td>
+                </tr>
+                <tr>
+                    <td>402호</td>
+                    <td><input type="number" id="17" size="20"></td>
+                </tr>
+                <tr>
+                    <td>403호</td>
+                    <td><input type="number" id="18" size="20"></td>
+                </tr>
+                <tr>
+                    <td>405호</td>
+                    <td><input type="number" id="19" size="20"></td>
+                </tr>
+                <tr>
+                    <td>406호</td>
+                    <td><input type="number" id="20" size="20"></td>
+                </tr>
+                <tr>
+                    <td>407호</td>
+                    <td><input type="number" id="21" size="20"></td>
+                </tr>
+                <tr>
+                    <td>501호</td>
+                    <td><input type="number" id="22" size="20"></td>
+                </tr>
+                <tr>
+                    <td>502호</td>
+                    <td><input type="number" id="23" size="20"></td>
+                </tr>
+                <tr>
+                    <td>503호</td>
+                    <td><input type="number" id="24" size="20"></td>
+                </tr>
+                <tr>
+                    <td>505호</td>
+                    <td><input type="number" id="25" size="20"></td>
+                </tr>
+                <tr>
+                    <td>506호</td>
+                    <td><input type="number" id="26" size="20"></td>
+                </tr>
+                <tr>
+                    <td>507호</td>
+                    <td><input type="number" id="27" size="20"></td>
+                </tr>
+                <tr>
+                    <td>701호</td>
+                    <td><input type="number" id="28" size="20"></td>
+                </tr>
+                <tr>
+                    <td>702호</td>
+                    <td><input type="number" id="29" size="20"></td>
+                </tr>
+                <tr>
+                    <td>703호</td>
+                    <td><input type="number" id="30" size="20"></td>
+                </tr>
+                <tr>
+                    <td>704호</td>
+                    <td><input type="number" id="31" size="20"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" onclick="edit();">수정</button>
+    </div>
+    <script>
+        if(localStorage.getItem("phonebooks") !== null) {
+    
+            var a = JSON.parse(localStorage.getItem("phonebooks"));
+
+            for(var i = 1; i < 32; i++) {
+                document.getElementById(i).value = a[i-1];
+            }
+        }       
+    </script>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
